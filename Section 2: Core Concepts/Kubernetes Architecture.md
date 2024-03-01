@@ -30,6 +30,7 @@
    ![alt text](https://github.com/hrOarr/Kubernetes-Certified-Application-Developer-CKAD-with-Tests/blob/f2ed3c69c7d37a223e3f1c152e0826fcdc2e929f/Section%202%3A%20Core%20Concepts/kube-api-server.drawio-2.png)
 
 - **etcd**
+  
    It acts as both a backend service discovery and a database. You can call it the brain of the Kubernetes cluster.
    ### Use cases
     - Strongly consistent
@@ -41,6 +42,7 @@
     - Stores all objects under the /registry directory key in key-value format. For example, information on a pod named Nginx in the default namespace can be found under /registry/pods/default/nginx
   
 - **Kube Scheduler**
+  
    The kube-scheduler is responsible for scheduling Kubernetes pods on worker nodes.
 
    When you deploy a pod, you specify the pod requirements such as CPU, memory, affinity, taints or tolerations, priority, persistent volumes (PV),  etc. The scheduler’s primary task is to identify the create request and choose the best node for a pod that satisfies the requirements.
@@ -49,6 +51,7 @@
    - Custom scheduler can be added
 
 - **Kube Controller Manager**
+  
    In Kubernetes, controllers are control loops that watch the state of your cluster, then make or request changes where needed. Each controller tries to move the current cluster state closer to the desired state.
 
    Following is the list of important built-in Kubernetes controllers.
@@ -62,6 +65,7 @@
    - service accounts controller.
    - Node controller
 - **Cloud Controller Manager (CCM)**
+  
    When kubernetes is deployed in cloud environments, the cloud controller manager acts as a bridge between Cloud Platform APIs and the Kubernetes cluster.
 
    This way the core kubernetes core components can work independently and allow the cloud providers to integrate with kubernetes using plugins. (For example, an interface between kubernetes cluster and AWS cloud API)
