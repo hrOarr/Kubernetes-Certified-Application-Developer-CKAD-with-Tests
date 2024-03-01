@@ -1,7 +1,6 @@
 kubectl get pods (see list of pods in default namespace)
 
 kubectl get pods -n <namespace-name> (see list of pods in specific namespace)
-
 kubectl get pods --all-namespaces (see list of pods in all namespaces)
 
 kubectl describe pods <pod-name>
