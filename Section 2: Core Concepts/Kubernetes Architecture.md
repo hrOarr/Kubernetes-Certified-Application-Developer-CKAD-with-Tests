@@ -101,3 +101,7 @@
    To understand this better, let’s take a look at two key concepts:
     - Container Runtime Interface (CRI): It is a set of APIs that allows Kubernetes to interact with different container runtimes. It allows different container runtimes to be used interchangeably with Kubernetes. The CRI defines the API for creating, starting, stopping, and deleting containers, as well as for managing images and container networks.
     - Open Container Initiative (OCI): It is a set of standards for container formats and runtimes
+
+
+## Useful resources
+ - https://devopscube.com/kubernetes-architecture-explained/
