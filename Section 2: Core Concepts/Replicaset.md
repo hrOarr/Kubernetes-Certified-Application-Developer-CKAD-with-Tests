@@ -22,3 +22,11 @@ spec:
         - containerPort: 80
 
 ```
+
+```
+
+kubectl get rs (see list of replicaset)
+kubectl get pods -l app=my-app (filter by label)
+kubectl scale replicaset my-rs --replicas=5
+
+```
