@@ -1,11 +1,17 @@
 kubectl get pods (see list of pods in default namespace)
+
 kubectl get pods -n <namespace-name> (see list of pods in specific namespace)
+
 kubectl get pods --all-namespaces (see list of pods in all namespaces)
 
 
+
 kubectl run nginx --image nginx:latest (create a pod)
+
 kubectl create deployment nginx --image nginx:latest --replicas 3 (create a deployment)
+
 kubectl scale deployment nginx --replicas 5 (scale a deployment)
+
 
 kubectl expose deployment/nginx --port 80 --type NodePort (expose a service)
 
