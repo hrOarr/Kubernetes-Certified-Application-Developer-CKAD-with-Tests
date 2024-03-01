@@ -22,4 +22,10 @@
 
 # Control Plane Components
  - Kube API server
+   ### Use cases
+   - API Management
+   - Authentication
+   - Only components that communicate with **etcd**
    ![alt text](https://github.com/hrOarr/Kubernetes-Certified-Application-Developer-CKAD-with-Tests/blob/f2ed3c69c7d37a223e3f1c152e0826fcdc2e929f/Section%202%3A%20Core%20Concepts/kube-api-server.drawio-2.png)
+
+ - etcd
