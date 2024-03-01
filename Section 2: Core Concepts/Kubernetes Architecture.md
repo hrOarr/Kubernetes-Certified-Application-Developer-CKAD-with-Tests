@@ -70,3 +70,21 @@
 
    This way the core kubernetes core components can work independently and allow the cloud providers to integrate with kubernetes using plugins. (For example, an interface between kubernetes cluster and AWS cloud API)
    Cloud controller integration allows Kubernetes cluster to provision cloud resources like instances (for nodes), Load Balancers (for services), and Storage Volumes (for persistent volumes).
+
+
+# Worker Node Components
+ - Kubelet
+   
+   Kubelet is an agent component that runs on every node in the cluster. t does not run as a container instead runs as a daemon, managed by systemd.
+   It is responsible for registering worker nodes with the API server and working with the podSpec (Pod specification – YAML or JSON) primarily from the API server. podSpec defines the containers that should run inside the pod, their resources (e.g. CPU and memory limits), and other settings such as environment variables, volumes, and labels.
+
+   To put it simply, kubelet is responsible for the following.
+   - Creating, modifying, and deleting containers for the pod.
+   - Responsible for handling liveliness, readiness, and startup probes.
+   - Responsible for Mounting volumes by reading pod configuration and creating respective directories on the host for the volume mount.
+   - Collecting and reporting Node and pod status via calls to the API server with implementations like cAdvisor and CRI.
+   - Kubelet uses the CRI (container runtime interface) gRPC interface to talk to the container runtime.
+   - It also exposes an HTTP endpoint to stream logs and provides exec sessions for clients.
+   - Uses the CSI (container storage interface) gRPC to configure block volumes.
+   - It uses the CNI plugin configured in the cluster to allocate the pod IP address and set up any necessary network routes and firewall rules for the pod.
+
