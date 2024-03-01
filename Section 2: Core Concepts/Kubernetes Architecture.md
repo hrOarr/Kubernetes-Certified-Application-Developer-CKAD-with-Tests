@@ -3,12 +3,13 @@
 # Architecture Terms
  - Nodes (Minions)
  - Cluster (set of nodes)
- - Master
+ - Control Plane (Master)
+ - Worker Nodes
 
-# Components
- - API Server
- - Scheduler
+
+## Control Plane
+ - kube-apiserver
  - etcd
- - Controller
- - Container Runtime
- - Kubelet
+ - kube-scheduler
+ - kube-controller-manager
+ - cloud-controller-manager
