@@ -7,9 +7,15 @@
  - Worker Nodes
 
 
+# Two High level components
 ## Control Plane
  - kube-apiserver
  - etcd
  - kube-scheduler
  - kube-controller-manager
  - cloud-controller-manager
+
+## Worker Node
+ - kubelet
+ - kube-proxy
+ - Container runtime
