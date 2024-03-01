@@ -4,7 +4,7 @@ kubectl get pods (see list of pods in default namespace)
 kubectl get pods -n <namespace-name> (see list of pods in specific namespace)
 kubectl get pods --all-namespaces (see list of pods in all namespaces)
 kubectl describe pods <pod-name>
-kubectl get pod <pod-name> -o yaml > pod-definition.yaml
+kubectl get pod <pod-name> --dry-run=client -o yaml > pod-definition.yaml (create config file from existing one)
 kubectl edit pod <pod-name>
 kubectl delete pod <pod-name>
 
