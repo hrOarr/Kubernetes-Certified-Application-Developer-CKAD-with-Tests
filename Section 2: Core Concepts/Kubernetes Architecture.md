@@ -20,3 +20,6 @@
  - kube-proxy
  - Container runtime
 
+# Control Plane Components
+ - Kube API server
+   ![alt text](https://github.com/hrOarr/Kubernetes-Certified-Application-Developer-CKAD-with-Tests/blob/f2ed3c69c7d37a223e3f1c152e0826fcdc2e929f/Section%202%3A%20Core%20Concepts/kube-api-server.drawio-2.png)
