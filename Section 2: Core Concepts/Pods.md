@@ -14,20 +14,15 @@ kubectl get nodes -o wide (see details of pods)
 ### Declarative approach to create a pod
 
 `
+
 apiVersion: v1
-
 kind: Pod
-
 metadata:
-
   name: nginx
-  
 spec:
-
   containers:
-  
 	- name: nginx
- 
 	  image: nginx:latest
+   
 `
 kubectl apply -f nginx.yaml (create pod using file)
