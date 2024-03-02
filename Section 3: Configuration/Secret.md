@@ -52,3 +52,22 @@ spec:
          name: mysecret
   restartPolicy: Never
 ```
+
+```
+## Container startup commands with secrets
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+  - name: mycontainer
+    image: myapp
+    command: [ "/app/start", "--token" ]
+    args:
+    - valueFrom:
+        secretKeyRef:
+          name: mysecret
+          key: token
+  restartPolicy: Never
+```
