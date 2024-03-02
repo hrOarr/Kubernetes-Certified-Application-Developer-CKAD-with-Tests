@@ -4,6 +4,7 @@ kubectl describe secret apikey
 ```
 
 ```
+## Secret YAML file
 apiVersion: v1
 kind: Secret
 metadata:
@@ -15,7 +16,7 @@ data:
 ```
 
 ```
-## Reference to Pod
+## Reference to Pod - 1
 apiVersion: v1
 kind: Pod
 metadata:
@@ -35,5 +36,19 @@ spec:
           secretKeyRef:
             name: mysecret
             key: password
+  restartPolicy: Never
+
+## Reference to Pod - 2
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secret-env-pod
+spec:
+  containers:
+  - name: mycontainer
+    image: redis
+    envFrom:
+     - secretRef:
+         name: mysecret
   restartPolicy: Never
 ```
