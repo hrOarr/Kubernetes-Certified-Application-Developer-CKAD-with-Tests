@@ -6,7 +6,7 @@
 ## Available Encryption Providers
  - Secretbox
 
-## declarative approach
+## Declarative approach
 ```
 # snippet for directly passing a key
 spec:
