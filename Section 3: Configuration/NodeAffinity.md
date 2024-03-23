@@ -1,8 +1,8 @@
-## label nodes for node affinity
+## Label nodes for affinity
 ```
 kubectl label nodes minikube-m02 name=app-worker-node
 ```
-## Pod definition config file for node affinity
+## Node affinity config
 ```
 apiVersion: v1
 kind: Pod
